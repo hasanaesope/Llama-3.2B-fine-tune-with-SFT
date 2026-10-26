@@ -1,0 +1,20 @@
+# Training outputs and model files
+outputs/
+squat_coach_model_personality/
+*.gguf
+*.safetensors
+*.bin
+*.pt
+
+# Notebook / Python
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
