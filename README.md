@@ -94,14 +94,6 @@ llama-cli -m Llama-3.2-3B-Instruct.Q4_K_M.gguf \
   -p "Spine: 0.3, Knee: 0.9, Ankle: 0.9. Openness: 0.68, Conscientiousness: 0.7, Agreeableness: 0.7, Extraversion: 0.9, Neuroticism: 0.7. Issues: Bend forward, Shallow squat, knee crossing toe."
 ```
 
-## Limitations
-
-- **Small, narrow dataset.** About 700 examples, many near-duplicates, covering one exercise and five issue types.
-- **No quantitative evaluation yet.** There is no held-out test set, so the repo does not claim measured accuracy or personality-fit results.
-- **Prompt format differs between training and testing.** Training wraps the instruction and input together in the user turn, while the sample inference cell sends the instruction as the system message. Outputs may therefore differ from what the training format would give.
-- **Personality adaptation is learned from the examples**, not validated against user outcomes such as trust or adherence.
-- **Not medical or physiotherapy advice.** The model gives general form cues only.
-
 ## Roadmap
 
 - [ ] Use one identical prompt format for training and inference
@@ -116,19 +108,4 @@ llama-cli -m Llama-3.2-3B-Instruct.Q4_K_M.gguf \
 - [Meta Llama 3.2](https://www.llama.com/) base model (use is subject to the Llama 3.2 Community License)
 - Hugging Face `transformers`, `trl`, `peft`, `datasets`
 
-## License
 
-Add a license for your own code and data (for example MIT), and keep the Llama 3.2 Community License terms for any distributed model weights.
-
-## Citation
-
-If this work is useful to your research, please cite it:
-
-```bibtex
-@misc{squatcoach_llama32_sft,
-  title  = {Personality-Adaptive Squat Coach: Fine-Tuning Llama 3.2 3B with SFT},
-  author = {YOUR NAME},
-  year   = {2026},
-  url    = {https://github.com/YOUR-USERNAME/YOUR-REPO}
-}
-```
